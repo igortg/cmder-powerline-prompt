@@ -3,17 +3,17 @@
 This is a custom prompt for [Cmder](http://cmder.net/) (the alternative console emulator for Windows). There's also a 
 [PowerShell version](https://github.com/AmrEldib/cmder-powershell-powerline-prompt) of this prompt. It looks like this:  
 
+**Changes of this Fork:**
+
+- Support for virtual environments
+- Minor changes on color configs
+
 ![screenshot](screenshot.png)
 
 It has a blue background for the prompt.  
 For folders with git repos, you get yellow background for changes, and green for clean repos.  
 
 The look is inspired by [Powerline for Vim](https://github.com/powerline/powerline), and [Zsh's theme agnoster](https://github.com/agnoster/agnoster-zsh-theme).
-
-**Changes of this Fork:**
-
-- Support for virtual environments
-- Minor changes on color configs
 
 # Requirements
 
