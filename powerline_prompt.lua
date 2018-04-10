@@ -54,7 +54,7 @@ function lambda_prompt_filter()
     prompt_header = "\x1b[37;44m{cwd} {git}{hg}"
     prompt_lhs = "\x1b[1;{clenv};40m{env}\x1b[1;{cllamb};40m{lamb} \x1b[0m"
     prompt_tpl = prompt_header .. "\n" .. prompt_lhs
-    
+
     prompt = string.gsub(prompt_tpl, "{cwd}", cwd)
     prompt = string.gsub(prompt, "{lamb}", promptEndChar)
     prompt = string.gsub(prompt, "{clenv}", envPromptColor)
@@ -208,6 +208,27 @@ function get_git_status()
     end
     file:close()
     return true
+end
+
+---
+ -- Find out current branch
+ -- @return {nil|git branch name}
+---
+function get_git_branch(git_dir)
+    git_dir = git_dir or get_git_dir()
+
+    -- If git directory not found then we're probably outside of repo
+    -- or something went wrong. The same is when head_file is nil
+    local head_file = git_dir and io.open(git_dir..'/HEAD')
+    if not head_file then return end
+
+    local HEAD = head_file:read()
+    head_file:close()
+
+    -- if HEAD matches branch expression, then we're on named branch
+    -- otherwise it is a detached commit
+    local branch_name = HEAD:match('ref: refs/heads/(.+)')
+    return branch_name or 'HEAD detached at '..HEAD:sub(1, 7)
 end
 
 -- adopted from clink.lua
