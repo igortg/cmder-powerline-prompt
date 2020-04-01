@@ -17,8 +17,9 @@ The look is inspired by [Powerline for Vim](https://github.com/powerline/powerli
 
 # Requirements
 
-Download [Powerline Fonts package](https://github.com/powerline/fonts/archive/master.zip)
-Extract it and install AnonymousPro font (right click on AnonymousPro TTF files and "Install")
+- Download [Powerline Fonts package](https://github.com/powerline/fonts/archive/master.zip)
+- Extract it and install AnonymousPro font (right click on AnonymousPro TTF files and "Install")
+
 You'll be able to use any font in Cmder, but this font contains the symbols included in the prompt. 
 
 ## Font
