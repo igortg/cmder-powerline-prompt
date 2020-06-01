@@ -27,7 +27,7 @@ To use another font and still show symbols correctly:
 - Go to Cmder Settings > Main  
 - Choose Main console font to be what you prefer (Recommended: *Consolas* - 18pt - **Bold**)
 - Choose _Alternative font_ to be _Anonymice Powerline_  
-- Modify the value of _Unicode ranges_ to add: `E0A0; E0B0;`  
+- Modify the value of _Unicode ranges_ to exactly `E0A0; E0B0;` and click on **Apply**.
 - Save Settings  
 
 # Usage
